@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-xs-3">
+    <p *ngIf="!isGameEnded()"><strong>Current game attempts: </strong> {{game.currentGameAttempts}}</p>
+    <p *ngIf="game.highscoreGameAttempts">(High score: {{game.highscoreGameAttempts}})</p>
+  </div>
+  <div class="col-xs-3">
+    <p *ngIf="!isGameEnded()"><strong>Current game time: </strong> {{game.currentGameTime}}</p>
+    <p *ngIf="game.highscoreGameTime">(High score: {{game.currentGameTime}})</p>
+  </div>
+</div>
+<app-cards *ngIf="!isGameEnded()" [cards]="cards" (onCardFlipped)="onCardFlipped($event)"></app-cards>
+<div *ngIf="isGameEnded()" class="alert alert-success">
+  <div class="row">
+    <div class="col-sm-8">
+      <p><i class="fa fa-check"></i> <strong>Congratulations!</strong></p>
+      <p>You win! Would you like to play again?</p>
+    </div>
+    <div class="col-sm-4">
+      <button class="btn btn-success btn-block" (click)="onNewGameStarted()">Start new game</button>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,3 @@
+<div class="row card-board">
+  <app-card *ngFor="let card of cards" [card]="card" (onCardFlipped)="flipCard($event)"></app-card>
+</div>

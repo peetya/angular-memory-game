@@ -3,7 +3,7 @@
 
 module.exports = function (config) {
   config.set({
-    basePath: 'angular-memory-game),
+    basePath: 'angular-memory-game',
     frameworks: ['jasmine', '@angular/cli'],
     plugins: [
       require('karma-jasmine'),

@@ -1,0 +1,12 @@
+.card {
+  /*height: 150px;*/
+  color: #ffffff;
+  font-size: 48pt;
+  text-align: center;
+  padding: 15px;
+  border: 1px #ffffff solid;
+}
+
+.rotated {
+
+}

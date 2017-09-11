@@ -1,0 +1,9 @@
+<div *ngIf="card.isFlipped; else covered_card" class="col-xs-3 card" [style.backgroundColor]="card.backgroundColor" (click)="flipCard()">
+  <i class="{{card.symbol}}"></i>
+</div>
+
+<ng-template #covered_card>
+  <div class="col-xs-3 card" (click)="flipCard()">
+    <i class="fa fa-question"></i>
+  </div>
+</ng-template>
